@@ -387,6 +387,7 @@ section[id] {
   align-items: center;
   justify-content: center;
   color: rgba(255, 253, 246, 0.85);
+  object-fit: cover;
 }
 .placeholder-img svg { fill: currentColor; opacity: 0.9; }
 

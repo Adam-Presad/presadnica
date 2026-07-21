@@ -1,5 +1,11 @@
 .DS_Store
 Thumbs.db
 
-# Full-resolution source photos (web-optimized copies are committed as images/hero-*.jpg)
+# Full-resolution source photos (web-optimized copies are committed instead: images/hero-*.jpg, images/offer-*.jpg)
 images/Hero_photo_*.jpg
+images/Košnja.jpg
+images/Orezivanje bilja.jpg
+images/Sadnja.jpg
+images/Održavanje vrta.jpg
+images/Dizajn novog vrta.jpg
+images/Realizacija novog vrta.jpg
