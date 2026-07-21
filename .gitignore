@@ -1,2 +1,5 @@
 .DS_Store
 Thumbs.db
+
+# Full-resolution source photos (web-optimized copies are committed as images/hero-*.jpg)
+images/Hero_photo_*.jpg
