@@ -415,6 +415,8 @@ section[id] {
 
 .carousel-track {
   display: flex;
+  flex: 1 1 0;
+  min-width: 0;
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
