@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="hr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Presadnica — Rasadnik biljaka</title>
+<meta name="description" content="Presadnica — rasadnik biljaka. Biljke birane s pažnjom, za vrtove, terase i unutarnje prostore.">
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Reusable leaf glyph, referenced via <use> in placeholder art -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="leaf-glyph" viewBox="0 0 64 64">
+    <path d="M32 4C18 10 8 24 8 38c0 12 10 22 24 22s24-10 24-22C56 24 46 10 32 4z" />
+    <path d="M32 8v52" stroke-width="2" fill="none" />
+  </symbol>
+</svg>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <img src="images/logo.png" alt="Presadnica" class="brand-logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="primary-nav" id="primaryNav">
+      <a href="#o-nama">O nama</a>
+      <a href="#ponuda">Ponuda</a>
+      <a href="#galerija">Galerija</a>
+      <a href="#kontakt" class="nav-cta">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- TODO: zamijenite .hero-slide pozadine stvarnim fotografijama vrtova -->
+    <div class="hero-slideshow" aria-hidden="true">
+      <div class="hero-slide ph-1"></div>
+      <div class="hero-slide ph-3"></div>
+      <div class="hero-slide ph-5"></div>
+      <div class="hero-slide ph-2"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-inner">
+      <div class="hero-card reveal">
+        <h1 class="hero-title">Ostvarite svoj savršen vrt</h1>
+        <p class="hero-subtitle">Presadnica će vam pomoći realizirati ideju vašeg idealnog vrta uz maksimalnu stručnost i ugodno partnerstvo.</p>
+        <div class="hero-actions">
+          <a href="#ponuda" class="btn btn-ghost">Pogledajte ponudu</a>
+          <a href="#kontakt" class="btn btn-ghost">Pošaljite upit</a>
+        </div>
+      </div>
+    </div>
+    <a href="#o-nama" class="scroll-cue" aria-label="Pomakni se prema dolje">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="o-nama">
+    <div class="container about-grid">
+      <div class="about-copy reveal">
+        <p class="section-kicker">O nama</p>
+        <h2>Obiteljska priča nastala 2010. godine</h2>
+        <p>Presadnica je hortikulturna kompanija koja posluje od 2010. godine kada ju je u Zagrebu osnovao Krešimir Gašpar. Danas u Presadnici s njim radi i njegov sin Adam. Misija Presadnice je svaki vrt istaknuti u najboljem svjetlu, pružajući zeleni dom po želji njegovog vlasnika. Od održavanja vrta poput orezivanja i košnje, do projekata sađenja, ideacije i stvaranja novoga vrta, Presadnica vam stoji na usluzi.</p>
+        <p>Nudimo suradnju na dulje vremenske etape i partnerstva ili jednokratne poslove.</p>
+      </div>
+      <div class="about-portrait reveal">
+        <!-- TODO: zamijenite fotografijom vlasnika i sina (Krešimir i Adam) -->
+        <div class="placeholder-img ph-4 portrait-placeholder"><span class="ph-label">Fotografija uskoro</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANT / PRODUCT HIGHLIGHTS -->
+  <section class="offer" id="ponuda">
+    <div class="container">
+      <p class="section-kicker reveal">Ponuda</p>
+      <h2 class="section-title reveal">Usluge koje nudimo</h2>
+      <div class="offer-grid">
+        <article class="offer-card reveal">
+          <div class="placeholder-img ph-1"><svg viewBox="0 0 64 64" width="40" height="40"><use href="#leaf-glyph"/></svg></div>
+          <h3>Košnja trave</h3>
+          <p>Uređivanje travnjaka ili uklanjanje jakog i visokog rasta trave i/ili raslinja.</p>
+        </article>
+        <article class="offer-card reveal">
+          <div class="placeholder-img ph-2"><svg viewBox="0 0 64 64" width="40" height="40"><use href="#leaf-glyph"/></svg></div>
+          <h3>Orezivanje bilja</h3>
+          <p>Oblikovanje bilja radi izgleda te zdravlja bilja.</p>
+        </article>
+        <article class="offer-card reveal">
+          <div class="placeholder-img ph-3"><svg viewBox="0 0 64 64" width="40" height="40"><use href="#leaf-glyph"/></svg></div>
+          <h3>Sadnja</h3>
+          <p>Besprijekorna integracija novog bilja u Vaš vrt.</p>
+        </article>
+        <article class="offer-card reveal">
+          <div class="placeholder-img ph-4"><svg viewBox="0 0 64 64" width="40" height="40"><use href="#leaf-glyph"/></svg></div>
+          <h3>Održavanje vrta</h3>
+          <p>Usluge grabljanja, raspuhivanja, plijevljenja i drugih poslova održavanja.</p>
+        </article>
+        <article class="offer-card reveal">
+          <div class="placeholder-img ph-5"><svg viewBox="0 0 64 64" width="40" height="40"><use href="#leaf-glyph"/></svg></div>
+          <h3>Dizajn novog vrta</h3>
+          <p>Osmišljavanje tlocrta, izgleda i biljnog sastava vrta, uz 3D sliku.</p>
+        </article>
+        <article class="offer-card reveal">
+          <div class="placeholder-img ph-6"><svg viewBox="0 0 64 64" width="40" height="40"><use href="#leaf-glyph"/></svg></div>
+          <h3>Realizacija novog vrta</h3>
+          <p>Ostvarivanje zamišljenog dizajna vrta.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="galerija">
+    <div class="container">
+      <p class="section-kicker reveal">Galerija</p>
+      <h2 class="section-title reveal">Prijašnji projekti</h2>
+    </div>
+    <div class="carousel reveal">
+      <button type="button" class="carousel-btn carousel-prev" aria-label="Prethodni projekt">&#8249;</button>
+      <div class="carousel-track" id="carouselTrack">
+        <!-- TODO: zamijenite .carousel-item pozadine stvarnim fotografijama projekata (vidi README.md) -->
+        <div class="carousel-item ph-2"><span class="ph-label">Fotografija uskoro</span></div>
+        <div class="carousel-item ph-4"><span class="ph-label">Fotografija uskoro</span></div>
+        <div class="carousel-item ph-1"><span class="ph-label">Fotografija uskoro</span></div>
+        <div class="carousel-item ph-5"><span class="ph-label">Fotografija uskoro</span></div>
+        <div class="carousel-item ph-3"><span class="ph-label">Fotografija uskoro</span></div>
+        <div class="carousel-item ph-6"><span class="ph-label">Fotografija uskoro</span></div>
+      </div>
+      <button type="button" class="carousel-btn carousel-next" aria-label="Sljedeći projekt">&#8250;</button>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="kontakt">
+    <div class="container contact-grid">
+      <div class="contact-copy reveal">
+        <p class="section-kicker">Kontakt</p>
+        <h2>Javite nam se</h2>
+        <p>Imate pitanje o ponudi ili želite dogovoriti posjet? Pošaljite nam poruku ili nas kontaktirajte izravno.</p>
+        <ul class="contact-details">
+          <li><span>Email</span><a href="mailto:info@presadnica.com">info@presadnica.com</a></li>
+          <li><span>Telefon</span><a href="tel:+385957602110">+385 95 760 2110</a></li>
+        </ul>
+      </div>
+      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- TODO: zamijenite YOUR_FORM_ID vašim Formspree ID-jem (formspree.io) -->
+        <label>
+          <span>Ime i prezime</span>
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label>
+          <span>Poruka</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Pošaljite poruku</button>
+        <p class="form-note" id="formNote" hidden>Hvala! Vaša poruka je poslana.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <img src="images/logo.png" alt="Presadnica" class="footer-logo">
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/company/presadnica" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="footer-copy">&copy; <span id="year"></span> Presadnica. Sva prava pridržana.</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
