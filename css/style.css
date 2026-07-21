@@ -257,8 +257,8 @@ section[id] {
 }
 
 .hero-card {
-  max-width: 860px;
-  width: 100%;
+  width: fit-content;
+  max-width: min(92vw, 860px);
   text-align: center;
   background: rgba(247, 242, 226, 0.94);
   backdrop-filter: blur(6px);
