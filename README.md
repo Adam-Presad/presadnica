@@ -14,7 +14,6 @@ Sva mjesta koja čekaju stvarne podatke označena su `<!-- TODO -->` komentarima
    - `.about-portrait` — fotografija vlasnika i sina (Krešimir i Adam).
    - `.carousel-item` (6 komada) — fotografije prijašnjih projekata u galeriji.
    - Dodajte sliku u `images/`, pa u `index.html` zamijenite `<div class="placeholder-img ...">...</div>` (ili `<div class="carousel-item ...">`) s `<img src="images/vasa-slika.jpg" alt="Opis slike" class="placeholder-img">`. Za velike izvorne fotografije preporuka je prvo ih smanjiti za web (vidi napomenu ispod).
-2. **Formspree ID** — forma šalje na `https://formspree.io/f/YOUR_FORM_ID`. Registrirajte se besplatno na [formspree.io](https://formspree.io), kreirajte formu i zamijenite `YOUR_FORM_ID` svojim ID-jem u `index.html` (`<form ... action="...">`).
 
 ### Optimizacija fotografija
 
