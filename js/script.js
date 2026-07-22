@@ -53,18 +53,43 @@ if (carouselTrack && carouselPrev && carouselNext) {
   carouselNext.addEventListener("click", () => scrollByCard(1));
 }
 
-// Contact form: friendly inline confirmation (works alongside real submission once
-// a real Formspree endpoint is set in index.html)
+// Contact form: submit via fetch to Web3Forms so we can show an inline message
+// without navigating away from the page
 const contactForm = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
 
 if (contactForm) {
-  contactForm.addEventListener("submit", (e) => {
-    if (contactForm.action.includes("YOUR_FORM_ID")) {
-      e.preventDefault();
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(contactForm),
+      });
+      const result = await response.json();
+
+      formNote.hidden = false;
+      if (response.ok && result.success) {
+        formNote.textContent = "Hvala! Vaša poruka je poslana.";
+        formNote.classList.remove("form-note-error");
+        contactForm.reset();
+      } else {
+        formNote.textContent =
+          "Došlo je do greške. Pokušajte ponovno ili nas kontaktirajte izravno na info@presadnica.com.";
+        formNote.classList.add("form-note-error");
+      }
+    } catch (err) {
       formNote.hidden = false;
       formNote.textContent =
-        "Forma još nije povezana — postavite Formspree ID u index.html (vidi README.md).";
+        "Došlo je do greške. Pokušajte ponovno ili nas kontaktirajte izravno na info@presadnica.com.";
+      formNote.classList.add("form-note-error");
+    } finally {
+      submitBtn.disabled = false;
     }
   });
 }

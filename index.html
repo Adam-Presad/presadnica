@@ -45,7 +45,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?v=2">
 </head>
 <body>
 
@@ -190,7 +190,10 @@
           <li><span>Telefon</span><a href="tel:+385957602110">+385 95 760 2110</a></li>
         </ul>
       </div>
-      <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/mvzeboaj" method="POST">
+      <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="c1d2bcc0-c7ec-418e-a530-b440448ffd55">
+        <input type="hidden" name="subject" value="Nova poruka s presadnica.com">
+        <input type="text" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
         <label>
           <span>Ime i prezime</span>
           <input type="text" name="name" required autocomplete="name">
@@ -204,7 +207,7 @@
           <textarea name="message" rows="5" required></textarea>
         </label>
         <button type="submit" class="btn btn-primary">Pošaljite poruku</button>
-        <p class="form-note" id="formNote" hidden>Hvala! Vaša poruka je poslana.</p>
+        <p class="form-note" id="formNote" hidden></p>
       </form>
     </div>
   </section>
@@ -221,6 +224,6 @@
   </div>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js?v=2"></script>
 </body>
 </html>
