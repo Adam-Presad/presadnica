@@ -30,9 +30,15 @@ Za portretne fotografije koje idu u širi/niži okvir (npr. hero pozadina), skal
 ```
 index.html      sadržaj i struktura stranice
 css/style.css   sav dizajn (boje, tipografija, layout, responsive)
-js/script.js    mobilni izbornik, scroll-reveal animacije, carousel, potvrda forme
+js/script.js    mobilni izbornik, scroll-reveal animacije, carousel, potvrda forme, prijevodi
 images/logo.png logotip (kopiran iz 01_Vizuali)
 ```
+
+## HR/EN prijevod
+
+Stranica ima prekidač jezika (gore desno u headeru, "HR / EN"). Radi bez ponovnog učitavanja stranice — sav tekst je dupliciran u `js/script.js` u objektu `translations` (`hr` i `en`), a HTML elementi imaju `data-i18n="ključ"` atribut koji ih povezuje s odgovarajućim prijevodom. Zadnji odabrani jezik pamti se u pregledniku (`localStorage`).
+
+**Kad mijenjate postojeći tekst ili dodajete novi:** ažurirajte ga na oba mjesta — i u `hr` i u `en` dijelu `translations` objekta u `js/script.js` — inače će jedna jezična verzija ostati stara. Za tekst unutar atributa (npr. `alt`, `aria-label`) dodajte `data-i18n-attr="ime-atributa"` uz `data-i18n`.
 
 ## Boje i fontovi (za lakše buduće izmjene)
 

@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Presadnica — Vrtlarstvo</title>
-<meta name="description" content="Presadnica — vrtlarstvo u Zagrebu. Košnja, orezivanje, sadnja, održavanje i dizajn vrta uz maksimalnu stručnost i ugodno partnerstvo.">
+<title data-i18n="meta.title">Presadnica — Vrtlarstvo</title>
+<meta name="description" data-i18n="meta.description" data-i18n-attr="content" content="Presadnica — vrtlarstvo u Zagrebu. Košnja, orezivanje, sadnja, održavanje i dizajn vrta uz maksimalnu stručnost i ugodno partnerstvo.">
 <link rel="canonical" href="https://presadnica.com/">
 <link rel="icon" type="image/png" href="images/logo.png">
 
@@ -45,7 +45,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=11">
 </head>
 <body>
 
@@ -62,14 +62,19 @@
     <a href="#top" class="brand">
       <img src="images/logo.png" alt="Presadnica" class="brand-logo">
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="primaryNav">
+    <button class="nav-toggle" id="navToggle" data-i18n="navToggle.aria" data-i18n-attr="aria-label" aria-label="Otvori izbornik" aria-expanded="false" aria-controls="primaryNav">
       <span></span><span></span><span></span>
     </button>
     <nav class="primary-nav" id="primaryNav">
-      <a href="#o-nama">O nama</a>
-      <a href="#ponuda">Ponuda</a>
-      <a href="#galerija">Galerija</a>
-      <a href="#kontakt" class="nav-cta">Kontakt</a>
+      <a href="#o-nama" data-i18n="nav.about">O nama</a>
+      <a href="#ponuda" data-i18n="nav.offer">Ponuda</a>
+      <a href="#galerija" data-i18n="nav.gallery">Galerija</a>
+      <a href="#kontakt" class="nav-cta" data-i18n="nav.contact">Kontakt</a>
+      <div class="lang-switch" role="group" data-i18n="lang.switchAria" data-i18n-attr="aria-label" aria-label="Odabir jezika">
+        <button type="button" class="lang-btn is-active" data-lang="hr">HR</button>
+        <span class="lang-sep">/</span>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
     </nav>
   </div>
 </header>
@@ -88,15 +93,15 @@
     <div class="hero-overlay"></div>
     <div class="container hero-inner">
       <div class="hero-card reveal">
-        <h1 class="hero-title">Ostvarite svoj savršen vrt</h1>
-        <p class="hero-subtitle">Presadnica će vam pomoći realizirati vaš idealan vrt uz maksimalnu stručnost i ugodno partnerstvo.</p>
+        <h1 class="hero-title" data-i18n="hero.title">Ostvarite svoj savršen vrt</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">Presadnica će vam pomoći realizirati vaš idealan vrt uz maksimalnu stručnost i ugodno partnerstvo.</p>
         <div class="hero-actions">
-          <a href="#ponuda" class="btn btn-ghost">Pogledajte ponudu</a>
-          <a href="#kontakt" class="btn btn-ghost">Pošaljite upit</a>
+          <a href="#ponuda" class="btn btn-ghost" data-i18n="hero.ctaOffer">Pogledajte ponudu</a>
+          <a href="#kontakt" class="btn btn-ghost" data-i18n="hero.ctaContact">Pošaljite upit</a>
         </div>
       </div>
     </div>
-    <a href="#o-nama" class="scroll-cue" aria-label="Pomakni se prema dolje">
+    <a href="#o-nama" class="scroll-cue" data-i18n="hero.scrollAria" data-i18n-attr="aria-label" aria-label="Pomakni se prema dolje">
       <span></span>
     </a>
   </section>
@@ -105,14 +110,14 @@
   <section class="about" id="o-nama">
     <div class="container about-grid">
       <div class="about-copy reveal">
-        <p class="section-kicker">O nama</p>
-        <h2>Obiteljska priča nastala 2010. godine</h2>
-        <p>Presadnica je hortikulturna kompanija koja posluje od 2010. godine kada ju je u Zagrebu osnovao Krešimir Gašpar. Danas u Presadnici s njim radi i njegov sin Adam. Misija Presadnice je svaki vrt istaknuti u najboljem svjetlu, pružajući zeleni dom po želji njegovog vlasnika. Od održavanja vrta poput orezivanja i košnje, do projekata sađenja, ideacije i stvaranja novoga vrta, Presadnica vam stoji na usluzi.</p>
-        <p>Nudimo suradnju na dulje vremenske etape i partnerstva ili jednokratne poslove.</p>
+        <p class="section-kicker" data-i18n="about.kicker">O nama</p>
+        <h2 data-i18n="about.title">Obiteljska priča nastala 2010. godine</h2>
+        <p data-i18n="about.p1">Presadnica je hortikulturna kompanija koja posluje od 2010. godine kada ju je u Zagrebu osnovao Krešimir Gašpar. Danas u Presadnici s njim radi i njegov sin Adam. Misija Presadnice je svaki vrt istaknuti u najboljem svjetlu, pružajući zeleni dom po želji njegovog vlasnika. Od održavanja vrta poput orezivanja i košnje, do projekata sađenja, ideacije i stvaranja novoga vrta, Presadnica vam stoji na usluzi.</p>
+        <p data-i18n="about.p2">Nudimo suradnju na dulje vremenske etape i partnerstva ili jednokratne poslove.</p>
       </div>
       <div class="about-portrait reveal">
         <!-- TODO: zamijenite fotografijom vlasnika i sina (Krešimir i Adam) -->
-        <div class="placeholder-img ph-4 portrait-placeholder"><span class="ph-label">Uskoro dostupno</span></div>
+        <div class="placeholder-img ph-4 portrait-placeholder"><span class="ph-label" data-i18n="placeholder.comingSoon">Uskoro dostupno</span></div>
       </div>
     </div>
   </section>
@@ -120,49 +125,49 @@
   <!-- PLANT / PRODUCT HIGHLIGHTS -->
   <section class="offer" id="ponuda">
     <div class="container">
-      <p class="section-kicker reveal">Ponuda</p>
-      <h2 class="section-title reveal">Usluge koje nudimo</h2>
+      <p class="section-kicker reveal" data-i18n="offer.kicker">Ponuda</p>
+      <h2 class="section-title reveal" data-i18n="offer.title">Usluge koje nudimo</h2>
       <div class="offer-grid">
         <article class="offer-card reveal">
-          <img class="offer-img" src="images/offer-kosnja.jpg" alt="Košnja trave">
+          <img class="offer-img" src="images/offer-kosnja.jpg" alt="Košnja trave" data-i18n="offer.card1.alt" data-i18n-attr="alt">
           <div class="offer-card-body">
-            <h3>Košnja trave</h3>
-            <p>Uređivanje travnjaka ili uklanjanje jakog i visokog rasta trave i/ili raslinja.</p>
+            <h3 data-i18n="offer.card1.title">Košnja trave</h3>
+            <p data-i18n="offer.card1.desc">Uređivanje travnjaka ili uklanjanje jakog i visokog rasta trave i/ili raslinja.</p>
           </div>
         </article>
         <article class="offer-card reveal">
-          <img class="offer-img" src="images/offer-orezivanje.jpg" alt="Orezivanje bilja">
+          <img class="offer-img" src="images/offer-orezivanje.jpg" alt="Orezivanje bilja" data-i18n="offer.card2.alt" data-i18n-attr="alt">
           <div class="offer-card-body">
-            <h3>Orezivanje bilja</h3>
-            <p>Oblikovanje bilja radi izgleda te zdravlja bilja.</p>
+            <h3 data-i18n="offer.card2.title">Orezivanje bilja</h3>
+            <p data-i18n="offer.card2.desc">Oblikovanje bilja radi izgleda te zdravlja bilja.</p>
           </div>
         </article>
         <article class="offer-card reveal">
-          <img class="offer-img" src="images/offer-sadnja.jpg" alt="Sadnja">
+          <img class="offer-img" src="images/offer-sadnja.jpg" alt="Sadnja" data-i18n="offer.card3.alt" data-i18n-attr="alt">
           <div class="offer-card-body">
-            <h3>Sadnja</h3>
-            <p>Besprijekorna integracija novog bilja u Vaš vrt.</p>
+            <h3 data-i18n="offer.card3.title">Sadnja</h3>
+            <p data-i18n="offer.card3.desc">Besprijekorna integracija novog bilja u Vaš vrt.</p>
           </div>
         </article>
         <article class="offer-card reveal">
-          <img class="offer-img" src="images/offer-odrzavanje.jpg" alt="Održavanje vrta">
+          <img class="offer-img" src="images/offer-odrzavanje.jpg" alt="Održavanje vrta" data-i18n="offer.card4.alt" data-i18n-attr="alt">
           <div class="offer-card-body">
-            <h3>Održavanje vrta</h3>
-            <p>Usluge grabljanja, raspuhivanja, plijevljenja i drugih poslova održavanja.</p>
+            <h3 data-i18n="offer.card4.title">Održavanje vrta</h3>
+            <p data-i18n="offer.card4.desc">Usluge grabljanja, raspuhivanja, plijevljenja i drugih poslova održavanja.</p>
           </div>
         </article>
         <article class="offer-card reveal">
-          <img class="offer-img" src="images/offer-dizajn.jpg" alt="Dizajn novog vrta">
+          <img class="offer-img" src="images/offer-dizajn.jpg" alt="Dizajn novog vrta" data-i18n="offer.card5.alt" data-i18n-attr="alt">
           <div class="offer-card-body">
-            <h3>Dizajn novog vrta</h3>
-            <p>Osmišljavanje tlocrta, izgleda i biljnog sastava vrta, uz 3D sliku.</p>
+            <h3 data-i18n="offer.card5.title">Dizajn novog vrta</h3>
+            <p data-i18n="offer.card5.desc">Osmišljavanje tlocrta, izgleda i biljnog sastava vrta, uz 3D sliku.</p>
           </div>
         </article>
         <article class="offer-card reveal">
-          <img class="offer-img" src="images/offer-realizacija.jpg" alt="Realizacija novog vrta">
+          <img class="offer-img" src="images/offer-realizacija.jpg" alt="Realizacija novog vrta" data-i18n="offer.card6.alt" data-i18n-attr="alt">
           <div class="offer-card-body">
-            <h3>Realizacija novog vrta</h3>
-            <p>Ostvarivanje zamišljenog dizajna vrta.</p>
+            <h3 data-i18n="offer.card6.title">Realizacija novog vrta</h3>
+            <p data-i18n="offer.card6.desc">Ostvarivanje zamišljenog dizajna vrta.</p>
           </div>
         </article>
       </div>
@@ -172,21 +177,21 @@
   <!-- GALLERY -->
   <section class="gallery" id="galerija">
     <div class="container">
-      <p class="section-kicker reveal">Galerija</p>
-      <h2 class="section-title reveal">Prijašnji projekti</h2>
+      <p class="section-kicker reveal" data-i18n="gallery.kicker">Galerija</p>
+      <h2 class="section-title reveal" data-i18n="gallery.title">Prijašnji projekti</h2>
     </div>
     <div class="carousel reveal">
-      <button type="button" class="carousel-btn carousel-prev" aria-label="Prethodni projekt">&#8249;</button>
+      <button type="button" class="carousel-btn carousel-prev" data-i18n="gallery.prevAria" data-i18n-attr="aria-label" aria-label="Prethodni projekt">&#8249;</button>
       <div class="carousel-track" id="carouselTrack">
         <!-- TODO: zamijenite .carousel-item pozadine stvarnim fotografijama projekata (vidi README.md) -->
-        <div class="carousel-item ph-2"><span class="ph-label">Uskoro dostupno</span></div>
-        <div class="carousel-item ph-4"><span class="ph-label">Uskoro dostupno</span></div>
-        <div class="carousel-item ph-1"><span class="ph-label">Uskoro dostupno</span></div>
-        <div class="carousel-item ph-5"><span class="ph-label">Uskoro dostupno</span></div>
-        <div class="carousel-item ph-3"><span class="ph-label">Uskoro dostupno</span></div>
-        <div class="carousel-item ph-6"><span class="ph-label">Uskoro dostupno</span></div>
+        <div class="carousel-item ph-2"><span class="ph-label" data-i18n="placeholder.comingSoon">Uskoro dostupno</span></div>
+        <div class="carousel-item ph-4"><span class="ph-label" data-i18n="placeholder.comingSoon">Uskoro dostupno</span></div>
+        <div class="carousel-item ph-1"><span class="ph-label" data-i18n="placeholder.comingSoon">Uskoro dostupno</span></div>
+        <div class="carousel-item ph-5"><span class="ph-label" data-i18n="placeholder.comingSoon">Uskoro dostupno</span></div>
+        <div class="carousel-item ph-3"><span class="ph-label" data-i18n="placeholder.comingSoon">Uskoro dostupno</span></div>
+        <div class="carousel-item ph-6"><span class="ph-label" data-i18n="placeholder.comingSoon">Uskoro dostupno</span></div>
       </div>
-      <button type="button" class="carousel-btn carousel-next" aria-label="Sljedeći projekt">&#8250;</button>
+      <button type="button" class="carousel-btn carousel-next" data-i18n="gallery.nextAria" data-i18n-attr="aria-label" aria-label="Sljedeći projekt">&#8250;</button>
     </div>
   </section>
 
@@ -194,12 +199,12 @@
   <section class="contact" id="kontakt">
     <div class="container contact-grid">
       <div class="contact-copy reveal">
-        <p class="section-kicker">Kontakt</p>
-        <h2>Javite nam se</h2>
-        <p>Imate pitanje o ponudi ili želite dogovoriti posjet? Pošaljite nam poruku ili nas kontaktirajte izravno.</p>
+        <p class="section-kicker" data-i18n="contact.kicker">Kontakt</p>
+        <h2 data-i18n="contact.title">Javite nam se</h2>
+        <p data-i18n="contact.p">Imate pitanje o ponudi ili želite dogovoriti posjet? Pošaljite nam poruku ili nas kontaktirajte izravno.</p>
         <ul class="contact-details">
-          <li><span>Email</span><a href="mailto:info@presadnica.com">info@presadnica.com</a></li>
-          <li><span>Telefon</span><a href="tel:+385957602110">+385 95 760 2110</a></li>
+          <li><span data-i18n="contact.emailLabel">Email</span><a href="mailto:info@presadnica.com">info@presadnica.com</a></li>
+          <li><span data-i18n="contact.phoneLabel">Telefon</span><a href="tel:+385957602110">+385 95 760 2110</a></li>
         </ul>
       </div>
       <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
@@ -207,18 +212,18 @@
         <input type="hidden" name="subject" value="Nova poruka s presadnica.com">
         <input type="text" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
         <label>
-          <span>Ime i prezime</span>
+          <span data-i18n="contact.formName">Ime i prezime</span>
           <input type="text" name="name" required autocomplete="name">
         </label>
         <label>
-          <span>Email</span>
+          <span data-i18n="contact.formEmail">Email</span>
           <input type="email" name="email" required autocomplete="email">
         </label>
         <label>
-          <span>Poruka</span>
+          <span data-i18n="contact.formMessage">Poruka</span>
           <textarea name="message" rows="5" required></textarea>
         </label>
-        <button type="submit" class="btn btn-primary">Pošaljite poruku</button>
+        <button type="submit" class="btn btn-primary" data-i18n="contact.formSubmit">Pošaljite poruku</button>
         <p class="form-note" id="formNote" hidden></p>
       </form>
     </div>
@@ -232,10 +237,10 @@
     <div class="footer-links">
       <a href="https://www.linkedin.com/company/presadnica" target="_blank" rel="noopener">LinkedIn</a>
     </div>
-    <p class="footer-copy">&copy; <span id="year"></span> Presadnica. Sva prava pridržana.</p>
+    <p class="footer-copy">&copy; <span id="year"></span> <span data-i18n="footer.rights">Presadnica. Sva prava pridržana.</span></p>
   </div>
 </footer>
 
-<script src="js/script.js?v=7"></script>
+<script src="js/script.js?v=8"></script>
 </body>
 </html>

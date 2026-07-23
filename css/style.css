@@ -184,6 +184,38 @@ section[id] {
   color: #fff;
 }
 
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  padding: 4px 2px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.lang-btn:hover {
+  color: var(--color-primary);
+}
+
+.lang-btn.is-active {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.lang-sep {
+  color: var(--color-line);
+  font-size: 0.8rem;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
