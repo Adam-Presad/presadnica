@@ -45,7 +45,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=12">
+<link rel="stylesheet" href="css/style.css?v=13">
 </head>
 <body>
 
@@ -207,25 +207,36 @@
           <li><span data-i18n="contact.phoneLabel">Telefon</span><a href="tel:+385957602110">+385 95 760 2110</a></li>
         </ul>
       </div>
-      <form class="contact-form reveal" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="df61ee1d-a130-4330-9745-eebec30f1681">
-        <input type="hidden" name="subject" value="Nova poruka s presadnica.com">
-        <input type="text" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
-        <label>
-          <span data-i18n="contact.formName">Ime i prezime</span>
-          <input type="text" name="name" required autocomplete="name">
-        </label>
-        <label>
-          <span data-i18n="contact.formEmail">Email</span>
-          <input type="email" name="email" required autocomplete="email">
-        </label>
-        <label>
-          <span data-i18n="contact.formMessage">Poruka</span>
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-        <button type="submit" class="btn btn-primary" data-i18n="contact.formSubmit">Pošaljite poruku</button>
-        <p class="form-note" id="formNote" hidden></p>
-      </form>
+      <div class="contact-form-col reveal">
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="df61ee1d-a130-4330-9745-eebec30f1681">
+          <input type="hidden" name="subject" value="Nova poruka s presadnica.com">
+          <input type="text" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+          <label>
+            <span data-i18n="contact.formName">Ime i prezime</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label>
+            <span data-i18n="contact.formEmail">Email</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label>
+            <span data-i18n="contact.formMessage">Poruka</span>
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary" data-i18n="contact.formSubmit">Pošaljite poruku</button>
+          <p class="form-note" id="formNote" hidden></p>
+        </form>
+        <div class="form-success" id="formSuccess" role="status" tabindex="-1" hidden>
+          <svg class="form-success-icon" viewBox="0 0 52 52" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <circle class="fs-circle" cx="26" cy="26" r="24"></circle>
+            <path class="fs-check" d="M15 27l7 7 15-16"></path>
+          </svg>
+          <h3 data-i18n="contact.successTitle">Poruka je poslana!</h3>
+          <p data-i18n="contact.successBody">Hvala na upitu — javit ćemo vam se u najkraćem roku.</p>
+          <button type="button" class="btn btn-ghost" id="formReset" data-i18n="contact.sendAnother">Pošaljite još jednu poruku</button>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -241,6 +252,6 @@
   </div>
 </footer>
 
-<script src="js/script.js?v=8"></script>
+<script src="js/script.js?v=9"></script>
 </body>
 </html>

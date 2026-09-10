@@ -55,7 +55,9 @@ const translations = {
     "contact.formEmail": "Email",
     "contact.formMessage": "Poruka",
     "contact.formSubmit": "Pošaljite poruku",
-    "contact.formSuccess": "Hvala! Vaša poruka je poslana.",
+    "contact.successTitle": "Poruka je poslana!",
+    "contact.successBody": "Hvala na upitu — javit ćemo vam se u najkraćem roku.",
+    "contact.sendAnother": "Pošaljite još jednu poruku",
     "contact.formError":
       "Došlo je do greške. Pokušajte ponovno ili nas kontaktirajte izravno na info@presadnica.com.",
     "footer.rights": "Presadnica. Sva prava pridržana.",
@@ -115,7 +117,9 @@ const translations = {
     "contact.formEmail": "Email",
     "contact.formMessage": "Message",
     "contact.formSubmit": "Send message",
-    "contact.formSuccess": "Thank you! Your message has been sent.",
+    "contact.successTitle": "Message sent!",
+    "contact.successBody": "Thanks for reaching out — we'll get back to you shortly.",
+    "contact.sendAnother": "Send another message",
     "contact.formError":
       "Something went wrong. Please try again or contact us directly at info@presadnica.com.",
     "footer.rights": "Presadnica. All rights reserved.",
@@ -210,6 +214,14 @@ if (carouselTrack && carouselPrev && carouselNext) {
 // without navigating away from the page
 const contactForm = document.getElementById("contactForm");
 const formNote = document.getElementById("formNote");
+const formSuccess = document.getElementById("formSuccess");
+const formReset = document.getElementById("formReset");
+
+const showFormError = () => {
+  formNote.hidden = false;
+  formNote.textContent = translations[currentLang]["contact.formError"];
+  formNote.classList.add("form-note-error");
+};
 
 if (contactForm) {
   contactForm.addEventListener("submit", async (e) => {
@@ -226,21 +238,30 @@ if (contactForm) {
       });
       const result = await response.json();
 
-      formNote.hidden = false;
       if (response.ok && result.success) {
-        formNote.textContent = translations[currentLang]["contact.formSuccess"];
-        formNote.classList.remove("form-note-error");
         contactForm.reset();
+        contactForm.hidden = true;
+        formNote.hidden = true;
+        formSuccess.hidden = false;
+        formSuccess.focus({ preventScroll: true });
+        formSuccess.scrollIntoView({ behavior: "smooth", block: "center" });
       } else {
-        formNote.textContent = translations[currentLang]["contact.formError"];
-        formNote.classList.add("form-note-error");
+        showFormError();
       }
     } catch (err) {
-      formNote.hidden = false;
-      formNote.textContent = translations[currentLang]["contact.formError"];
-      formNote.classList.add("form-note-error");
+      showFormError();
     } finally {
       submitBtn.disabled = false;
     }
+  });
+}
+
+if (formReset) {
+  formReset.addEventListener("click", () => {
+    formSuccess.hidden = true;
+    contactForm.hidden = false;
+    formNote.hidden = true;
+    const firstInput = contactForm.querySelector('input[name="name"]');
+    if (firstInput) firstInput.focus();
   });
 }
