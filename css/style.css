@@ -702,8 +702,15 @@ section[id] {
   .offer, .gallery, .contact { padding: 72px 0; }
   .contact-form { padding: 28px; }
   .footer-inner { justify-content: center; text-align: center; }
-  .hero-card { padding: 40px 28px; }
   .carousel-btn { width: 36px; height: 36px; font-size: 1.2rem; }
+
+  /* Slimmer hero so more of the background slideshow shows through */
+  .hero { min-height: 78vh; }
+  .hero-inner { padding-top: 32px; padding-bottom: 32px; }
+  .hero-card { padding: 28px 22px; max-width: 88vw; }
+  .hero-title { font-size: clamp(1.6rem, 6.5vw, 2rem); }
+  .hero-subtitle { font-size: 1rem; margin-bottom: 1.5em; }
+  .hero-actions { gap: 12px; }
 }
 
 @media (max-width: 480px) {
