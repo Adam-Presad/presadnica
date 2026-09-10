@@ -334,6 +334,11 @@ section[id] {
   justify-content: center;
 }
 
+/* Equal-width, centered hero buttons for symmetry */
+.hero-actions .btn {
+  min-width: 210px;
+}
+
 .scroll-cue {
   position: absolute;
   bottom: 36px;
@@ -799,5 +804,6 @@ section[id] {
 
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { min-width: 0; }
   .carousel { gap: 6px; padding: 0 12px; }
 }
