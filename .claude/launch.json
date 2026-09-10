@@ -3,8 +3,14 @@
   "configurations": [
     {
       "name": "static-site",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8532"],
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "$root=$PWD.Path; $l=[System.Net.HttpListener]::new(); $l.Prefixes.Add('http://localhost:8532/'); $l.Start(); Write-Host ('Serving ' + $root + ' on http://localhost:8532'); $m=@{'.html'='text/html; charset=utf-8';'.css'='text/css';'.js'='application/javascript';'.json'='application/json';'.jpg'='image/jpeg';'.jpeg'='image/jpeg';'.png'='image/png';'.gif'='image/gif';'.svg'='image/svg+xml';'.webp'='image/webp';'.ico'='image/x-icon';'.xml'='application/xml';'.txt'='text/plain';'.woff'='font/woff';'.woff2'='font/woff2'}; while($l.IsListening){ try{ $c=$l.GetContext(); $rel=[System.Uri]::UnescapeDataString($c.Request.Url.AbsolutePath.TrimStart('/')); if($rel -eq ''){ $rel='index.html' }; $f=Join-Path $root $rel; if((Test-Path $f -PathType Leaf) -and $f.StartsWith($root)){ $b=[System.IO.File]::ReadAllBytes($f); $e=[System.IO.Path]::GetExtension($f).ToLowerInvariant(); if($m.ContainsKey($e)){ $c.Response.ContentType=$m[$e] }; $c.Response.Headers.Add('Cache-Control','no-store'); $c.Response.OutputStream.Write($b,0,$b.Length) } else { $c.Response.StatusCode=404 }; $c.Response.OutputStream.Close() } catch {} }"
+      ],
       "port": 8532
     }
   ]
