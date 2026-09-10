@@ -61,7 +61,7 @@ img { max-width: 100%; display: block; }
 }
 
 section[id] {
-  scroll-margin-top: 95px;
+  scroll-margin-top: 108px;
 }
 
 /* ---------- Reveal animation ---------- */
@@ -144,7 +144,7 @@ section[id] {
 }
 
 .brand-logo {
-  height: 56px;
+  height: 70px;
   width: auto;
 }
 
@@ -754,6 +754,9 @@ section[id] {
 
 @media (max-width: 720px) {
   .nav-toggle { display: flex; }
+
+  /* Keep the compact logo on mobile; the 25% larger size is desktop-only */
+  .brand-logo { height: 56px; }
 
   .primary-nav {
     position: absolute;
