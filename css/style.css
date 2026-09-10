@@ -300,17 +300,17 @@ section[id] {
 
 .hero-card {
   width: fit-content;
-  max-width: min(92vw, 860px);
+  max-width: min(92vw, 645px);
   text-align: center;
   background: rgba(247, 242, 226, 0.94);
   backdrop-filter: blur(6px);
   border-radius: 4px;
-  padding: 56px 48px;
+  padding: 42px 36px;
   box-shadow: 0 30px 60px -20px rgba(20, 26, 10, 0.4);
 }
 
 .hero-title {
-  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-size: clamp(1.5rem, 3vw, 2.3rem);
   font-style: italic;
   font-weight: 500;
   margin-bottom: 0.4em;
