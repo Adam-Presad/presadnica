@@ -7,6 +7,7 @@
   --color-primary: #3f4a1f;
   --color-primary-dark: #2b3314;
   --color-accent: #a9772f;
+  --color-logo: #19390d;
   --color-line: rgba(38, 49, 26, 0.12);
 
   --font-display: "Cormorant Garamond", serif;
@@ -464,9 +465,10 @@ section[id] {
 }
 
 .carousel {
+  --thumb-w: clamp(300px, 40vw, 450px);
   position: relative;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
   max-width: var(--container-w);
   margin: 0 auto;
@@ -487,7 +489,15 @@ section[id] {
 .carousel-track::-webkit-scrollbar { display: none; }
 
 .carousel-item {
-  flex: 0 0 clamp(240px, 32vw, 360px);
+  flex: 0 0 var(--thumb-w);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+
+.carousel-thumb {
+  width: 100%;
   aspect-ratio: 4 / 3;
   border-radius: 2px;
   display: flex;
@@ -495,10 +505,18 @@ section[id] {
   justify-content: center;
   position: relative;
   overflow: hidden;
-  scroll-snap-align: start;
 }
 
-.carousel-item .ph-label {
+.carousel-caption {
+  margin-top: 12px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: var(--color-logo);
+  text-align: center;
+}
+
+.carousel-thumb .ph-label {
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -509,6 +527,8 @@ section[id] {
 
 .carousel-btn {
   flex: 0 0 auto;
+  /* Vertically centre the buttons on the thumbnail, ignoring the caption below */
+  margin-top: calc(var(--thumb-w) * 0.375 - 18px);
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -792,6 +812,7 @@ section[id] {
   .contact-form { padding: 28px; }
   .footer-inner { justify-content: center; text-align: center; }
   .carousel-btn { width: 36px; height: 36px; font-size: 1.2rem; }
+  .carousel { --thumb-w: clamp(240px, 70vw, 300px); }
 
   /* Slimmer hero so more of the background slideshow shows through */
   .hero { min-height: 78vh; }
