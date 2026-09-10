@@ -37,6 +37,11 @@ h1, h2, h3 {
   color: var(--color-primary-dark);
   margin: 0 0 0.5em;
   line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  /* The serif face defaults to short old-style figures, which look off
+     against all-caps letters; lining figures match the cap height. */
+  font-variant-numeric: lining-nums;
 }
 
 p { margin: 0 0 1em; }
@@ -56,7 +61,7 @@ img { max-width: 100%; display: block; }
 }
 
 section[id] {
-  scroll-margin-top: 130px;
+  scroll-margin-top: 95px;
 }
 
 /* ---------- Reveal animation ---------- */
@@ -135,11 +140,11 @@ section[id] {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 11px 0;
 }
 
 .brand-logo {
-  height: 80px;
+  height: 56px;
   width: auto;
 }
 
@@ -752,7 +757,7 @@ section[id] {
 
   .primary-nav {
     position: absolute;
-    top: 113px;
+    top: 79px;
     left: 0;
     right: 0;
     background: var(--color-bg);
