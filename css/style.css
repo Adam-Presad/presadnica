@@ -312,7 +312,6 @@ section[id] {
 
 .hero-title {
   font-size: clamp(1.5rem, 3vw, 2.3rem);
-  font-style: italic;
   font-weight: 500;
   margin-bottom: 0.4em;
 }
