@@ -118,12 +118,12 @@ section[id] {
 }
 
 .section-kicker {
-  font-family: var(--font-body);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.75rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
   color: var(--color-accent);
-  margin-bottom: 0.75em;
+  margin-bottom: 0.5em;
 }
 
 .section-title {
@@ -386,7 +386,7 @@ section[id] {
   font-size: clamp(1.8rem, 3vw, 2.6rem);
 }
 
-.about-copy p {
+.about-copy p:not(.section-kicker) {
   color: var(--color-ink-soft);
   font-size: 1.02rem;
 }
@@ -563,7 +563,7 @@ section[id] {
   gap: 72px;
 }
 
-.contact-copy p {
+.contact-copy p:not(.section-kicker) {
   color: var(--color-ink-soft);
 }
 
