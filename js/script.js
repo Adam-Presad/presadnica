@@ -21,6 +21,7 @@ const translations = {
     "about.p1":
       "Presadnica je hortikulturna kompanija koja posluje od 2010. godine kada ju je u Zagrebu osnovao Krešimir Gašpar. Danas u Presadnici s njim radi i njegov sin Adam. Misija Presadnice je svaki vrt istaknuti u najboljem svjetlu, pružajući zeleni dom po želji njegovog vlasnika. Od održavanja vrta poput orezivanja i košnje, do projekata sađenja, ideacije i stvaranja novoga vrta, Presadnica vam stoji na usluzi.",
     "about.p2": "Nudimo suradnju na dulje vremenske etape i partnerstva ili jednokratne poslove.",
+    "about.photoAlt": "Krešimir i Adam Gašpar, osnivači Presadnice",
     "placeholder.comingSoon": "Uskoro dostupno",
     "offer.kicker": "Ponuda",
     "offer.title": "Usluge koje nudimo",
@@ -84,6 +85,7 @@ const translations = {
     "about.p1":
       "Presadnica is a horticulture company that has been operating since 2010, when it was founded in Zagreb by Krešimir Gašpar. Today his son Adam works alongside him at Presadnica. Our mission is to put every garden in its best light, giving its owner the green home they want. From garden maintenance like pruning and mowing, to planting projects, design and building new gardens, Presadnica is here for you.",
     "about.p2": "We offer both long-term partnerships and one-off projects.",
+    "about.photoAlt": "Krešimir and Adam Gašpar, founders of Presadnica",
     "placeholder.comingSoon": "Coming soon",
     "offer.kicker": "Services",
     "offer.title": "What we offer",
