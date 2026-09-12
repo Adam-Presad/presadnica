@@ -372,7 +372,7 @@ section[id] {
 
 /* ---------- About ---------- */
 .about {
-  padding: 120px 0;
+  padding: 56px 0;
 }
 
 .about-grid {
@@ -391,26 +391,7 @@ section[id] {
   font-size: 1.02rem;
 }
 
-.about-portrait {
-  position: relative;
-}
-
-/* Offset outline peeking out behind the photo, for a framed, editorial feel */
-.about-portrait::after {
-  content: "";
-  position: absolute;
-  top: 18px;
-  left: 18px;
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--color-accent);
-  border-radius: 2px;
-  z-index: 0;
-}
-
 .about-photo {
-  position: relative;
-  z-index: 1;
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -488,7 +469,7 @@ section[id] {
 
 /* ---------- Gallery / carousel ---------- */
 .gallery {
-  padding: 100px 0;
+  padding: 56px 0;
 }
 
 .carousel {
@@ -800,7 +781,7 @@ section[id] {
 @media (max-width: 1024px) {
   .offer-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .about-portrait { max-width: 420px; }
+  .about-portrait { max-width: 420px; margin: 0 auto; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
 }
 
@@ -834,8 +815,9 @@ section[id] {
   }
 
   .offer-grid { grid-template-columns: 1fr; }
-  .about { padding: 80px 0; }
-  .offer, .gallery, .contact { padding: 72px 0; }
+  .about { padding: 56px 0; }
+  .offer, .contact { padding: 72px 0; }
+  .gallery { padding: 56px 0; }
   .contact-form { padding: 28px; }
   .footer-inner { justify-content: center; text-align: center; }
   .carousel-btn { width: 36px; height: 36px; font-size: 1.2rem; }
