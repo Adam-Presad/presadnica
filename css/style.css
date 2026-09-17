@@ -649,6 +649,25 @@ section[id] {
   align-self: flex-start;
 }
 
+/* Photo attachments aren't supported by the form backend on the free
+   plan, so point people to email/WhatsApp instead */
+.form-hint {
+  margin: -10px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-ink-soft);
+}
+
+.form-hint a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.form-hint a:hover {
+  color: var(--color-primary);
+}
+
 .form-note {
   color: var(--color-primary);
   font-size: 0.9rem;
