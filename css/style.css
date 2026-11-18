@@ -559,7 +559,10 @@ section[id] {
 /* ---------- Contact ---------- */
 .contact {
   padding: 120px 0;
-  background: var(--color-bg-alt);
+  /* Cream (not bg-alt) while the Gallery section is hidden, so it stays
+     visually distinct from the Offer section above. Switch back to
+     var(--color-bg-alt) when the Gallery is restored. */
+  background: var(--color-bg);
 }
 
 .contact-grid {
